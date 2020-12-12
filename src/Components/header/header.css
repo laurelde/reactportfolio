@@ -1,0 +1,32 @@
+.nav.navbar-nav {
+  margin: 0;
+  width: 100%;
+}
+
+.navbar {
+  width: 100vw;
+}
+
+#navbarSupportedContent .nav-item {
+  text-align: center;
+}
+
+.collapse > .navbar-nav {
+  width: 100%;
+}
+
+#brand {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  color: #212121;
+}
+
+#navbarSupportedContent,
+.navbar-toggler .navbar-toggler-icon {
+  color: #212121;
+}
+
+.collapse.navbar-collapse {
+  color: #212121;
+}
