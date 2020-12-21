@@ -14,8 +14,9 @@ class Project extends Component {
           name={project.name}
           description={project.description}
           tags={project.tags}
+          themeColor={project.themeColor}
         ></Overview>
-        <Preview key={project.id} link={project.link}></Preview>
+        <Preview key={project.id} id={project.id} project={project}></Preview>
       </div>
     );
   }

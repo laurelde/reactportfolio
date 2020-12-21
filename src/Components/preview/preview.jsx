@@ -1,20 +1,17 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Route, BrowserRouter as Router } from "react-router-dom";
-import Report from "../report/report";
+import { Link, Route } from "react-router-dom";
+import "./preview.css";
 
 class Preview extends Component {
-  state = {};
   render() {
+    console.log("Preview RENDERED");
+    console.log(this.props);
     return (
       <div>
         <img></img>
-        <Link to={`projects/${this.props.link}`}>
-          <button class="btn btn-primary">View Project</button>
+        <Link to={`/projects/${this.props.id}`} className="view-link">
+          <button>View Project</button>
         </Link>
-        <Router>
-          <Route path={`projects/:${this.props.id}`} component={Report} />
-        </Router>
       </div>
     );
   }

@@ -5,6 +5,7 @@
 
 .navbar {
   width: 100vw;
+  height: 10vh;
 }
 
 #navbarSupportedContent .nav-item {
@@ -16,15 +17,20 @@
 }
 
 #brand {
-  width: inherit;
+  width: min-content;
   display: flex;
   justify-content: space-between;
   color: #212121;
+  visibility: hidden;
 }
 
 #navbarSupportedContent,
 .navbar-toggler .navbar-toggler-icon {
   color: #212121;
+}
+
+.navbar-toggler-icon i {
+  vertical-align: middle;
 }
 
 .collapse.navbar-collapse {
