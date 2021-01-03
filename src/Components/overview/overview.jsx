@@ -6,10 +6,10 @@ class Overview extends Component {
     const { name, description, tags, themeColor } = this.props;
     const tagNames = tags.map((tag) => <li key={tag}>{tag}</li>);
     return (
-      <div>
-        <h1 style={{ backgroundColor: { themeColor } }}> {name} </h1>
-        <h2> {description} </h2>
+      <div className="overview">
+        <h1> {name} </h1>
         <ul>{tagNames}</ul>
+        <h2> {description} </h2>
       </div>
     );
   }

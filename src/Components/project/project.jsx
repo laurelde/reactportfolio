@@ -10,7 +10,7 @@ class Project extends Component {
     return (
       <div className="project">
         <Overview
-          key={project.id}
+          key={project.name}
           name={project.name}
           description={project.description}
           tags={project.tags}

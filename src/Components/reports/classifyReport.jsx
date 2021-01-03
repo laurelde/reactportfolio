@@ -1,48 +1,57 @@
 import React, { Component } from "react";
+import ReportOverview from "../reportOverview/reportOverview";
 import Header from "../header/header";
-import "./reports.css";
+import Footer from "../footer/footer";
+import persona1 from "../../images/interaction/persona1.png";
+import persona2 from "../../images/interaction/persona2.png";
+import persona3 from "../../images/interaction/persona3.png";
+import persona4 from "../../images/interaction/persona4.png";
+import sketches from "../../images/interaction/sketches.jpg";
+import storyboard1 from "../../images/interaction/storyboard1.png";
+import storyboard2 from "../../images/interaction/storyboard2.png";
+import userflow1 from "../../images/interaction/userFlow1.jpeg";
+import userflow2 from "../../images/interaction/userFlow2.jpeg";
+import wireframe1 from "../../images/interaction/wireframe1.png";
+import wireframe2 from "../../images/interaction/wireframe2.png";
+import wireframe3 from "../../images/interaction/wireframe3.png";
+import wireframe4 from "../../images/interaction/wireframe4.png";
+import wireframe5 from "../../images/interaction/wireframe5.png";
+import wireframe6 from "../../images/interaction/wireframe6.png";
+import wireframe7 from "../../images/interaction/wireframe7.png";
+import wireframe8 from "../../images/interaction/wireframe8.png";
+import screen1 from "../../images/interaction/screen1.png";
+import screen2 from "../../images/interaction/screen2.png";
+import screen3 from "../../images/interaction/screen3.png";
+import screen4 from "../../images/interaction/screen4.png";
+import screen5 from "../../images/interaction/screen5.png";
+import screen6 from "../../images/interaction/screen6.png";
+import screen7 from "../../images/interaction/screen7.png";
+import screen8 from "../../images/interaction/screen8.png";
 
 class classifyReport extends Component {
-  state = {};
+  state = {
+    name: "Classify Application",
+    client: "UMSI Project",
+    role: "UX Designer (Team of 5)",
+    duration: "Fall 2019",
+    skills: [
+      "UX Design",
+      "Persona Creation",
+      "Storyboarding",
+      "Sketching",
+      "Wireframing",
+      "Paper & Digital Prototyping",
+      "Figma",
+      "iMovie",
+    ],
+    themeColor: "#9765a3",
+  };
   render() {
     return (
-      <>
-        <Header></Header>
-        <h1 className="projectType">Classify Application</h1>
-        <div className="specs">
-          <div className="row">
-            <div className="col-sm-4 col-xs-12">
-              <h2>
-                <img className="icon" src="images/icons/partner.svg"></img>
-                <strong> Client</strong>
-              </h2>
-              <h2>UMSI Project</h2>
-            </div>
-            <div className="col-sm-4 col-xs-12">
-              <h2>
-                <img className="icon" src="images/icons/girl.svg"></img>
-                <strong> Role</strong>
-              </h2>
-              <h2>UX Designer (Team of 5)</h2>
-            </div>
-            <div className="col-sm-4 col-xs-12">
-              <h2>
-                <img className="icon" src="images/icons/calendar.svg"></img>
-                <strong> Duration</strong>
-              </h2>
-              <h2>Fall 2019</h2>
-            </div>
-          </div>
-          <div className="row">
-            <h2>
-              <strong>Skills: </strong>UX Design, Persona Creation,
-              Storyboarding, Sketching, Wireframing, Paper Prototyping, Digital
-              Prototyping, Figma, iMovie
-            </h2>
-          </div>
-        </div>
-
-        <section className="project">
+      <div className="report">
+        <Header />
+        <ReportOverview key="1" overview={this.state} />
+        <section className="project-walkthrough">
           <h2>Problem:</h2>
           <p>
             University of Michigan students have difficulty exploring interests
@@ -69,26 +78,10 @@ class classifyReport extends Component {
 
           <h2>Personas:</h2>
 
-          <img
-            src="images/interaction/persona1.png"
-            className="right-block"
-            id="persona"
-          ></img>
-          <img
-            src="images/interaction/persona2.png"
-            className="left-block"
-            id="persona"
-          ></img>
-          <img
-            src="images/interaction/persona3.png"
-            className="right-block"
-            id="persona"
-          ></img>
-          <img
-            src="images/interaction/persona4.png"
-            className="left-block"
-            id="persona"
-          ></img>
+          <img src={persona1} className="right-block" id="persona"></img>
+          <img src={persona2} className="left-block" id="persona"></img>
+          <img src={persona3} className="right-block" id="persona"></img>
+          <img src={persona4} className="left-block" id="persona"></img>
 
           <p>
             To build off these personas, we decided to scope out the specific
@@ -170,10 +163,7 @@ class classifyReport extends Component {
 
           <h2>Sketches:</h2>
 
-          <img
-            src="images/interaction/sketches.jpg"
-            className="center-block"
-          ></img>
+          <img src={sketches} className="center-block"></img>
 
           <p>
             With our sketches in hand, my team and I tried to build off of our
@@ -193,10 +183,7 @@ class classifyReport extends Component {
             her schedule. She attends the className and is able to use the
             skills she learned to find a job.
           </p>
-          <img
-            src="images/interaction/storyboard1.png"
-            className="center-block"
-          ></img>
+          <img src={storyboard1} className="center-block"></img>
           <p>
             The second storyboard mirrors the scenario where Mary Brown hosts a
             className on marketing. She is a different type of user, a
@@ -206,10 +193,7 @@ class classifyReport extends Component {
             without having to commit to teaching multiple times, and she finds
             that she enjoys teaching students who are really interested.
           </p>
-          <img
-            src="images/interaction/storyboard2.png"
-            className="center-block"
-          ></img>
+          <img src={storyboard2} className="center-block"></img>
           <p>
             After describing how the product would be used in real-world
             scenarios, we decided to map our how a user would go about
@@ -222,14 +206,11 @@ class classifyReport extends Component {
             functionality necessary to accomplish the scenarios we created.
           </p>
           <h2>User Flows:</h2>
-          <img
-            src="images/interaction/userFlow1.jpeg"
-            className="center-block"
-          ></img>
-          <img
-            src="images/interaction/userFlow2.jpeg"
-            className="center-block"
-          ></img>
+          <div className="row userflow">
+            <img src={userflow1} className="center-block col-12 col-lg-6"></img>
+            <img src={userflow2} className="center-block col-12 col-lg-6"></img>
+          </div>
+
           <p>
             We then translated the user flow into wireframes to see what
             information would need to be displayed on each screen and what
@@ -243,54 +224,30 @@ class classifyReport extends Component {
 
           <div className="row wireframes">
             <div className="col-lg-3 col-6">
-              <img
-                src="images/interaction/wireframe1.png"
-                id="wireframeInt"
-              ></img>
+              <img src={wireframe1} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img
-                src="images/interaction/wireframe2.png"
-                id="wireframeInt"
-              ></img>
+              <img src={wireframe2} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img
-                src="images/interaction/wireframe3.png"
-                id="wireframeInt"
-              ></img>
+              <img src={wireframe3} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img
-                src="images/interaction/wireframe4.png"
-                id="wireframeInt"
-              ></img>
+              <img src={wireframe4} className="wireframeInt"></img>
             </div>
           </div>
           <div className="row wireframes">
             <div className="col-lg-3 col-6">
-              <img
-                src="images/interaction/wireframe5.png"
-                id="wireframeInt"
-              ></img>
+              <img src={wireframe5} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img
-                src="images/interaction/wireframe6.png"
-                id="wireframeInt"
-              ></img>
+              <img src={wireframe6} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img
-                src="images/interaction/wireframe7.png"
-                id="wireframeInt"
-              ></img>
+              <img src={wireframe7} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img
-                src="images/interaction/wireframe8.png"
-                id="wireframeInt"
-              ></img>
+              <img src={wireframe8} className="wireframeInt"></img>
             </div>
           </div>
           <p>
@@ -309,30 +266,30 @@ class classifyReport extends Component {
 
           <div className="row wireframes">
             <div className="col-lg-3 col-6">
-              <img src="images/interaction/screen1.png" id="wireframeInt"></img>
+              <img src={screen1} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img src="images/interaction/screen2.png" id="wireframeInt"></img>
+              <img src={screen2} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img src="images/interaction/screen3.png" id="wireframeInt"></img>
+              <img src={screen3} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img src="images/interaction/screen4.png" id="wireframeInt"></img>
+              <img src={screen4} className="wireframeInt"></img>
             </div>
           </div>
           <div className="row wireframes">
             <div className="col-lg-3 col-6">
-              <img src="images/interaction/screen5.png" id="wireframeInt"></img>
+              <img src={screen5} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img src="images/interaction/screen6.png" id="wireframeInt"></img>
+              <img src={screen6} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img src="images/interaction/screen7.png" id="wireframeInt"></img>
+              <img src={screen7} className="wireframeInt"></img>
             </div>
             <div className="col-lg-3 col-6">
-              <img src="images/interaction/screen8.png" id="wireframeInt"></img>
+              <img src={screen8} className="wireframeInt"></img>
             </div>
           </div>
           <p>
@@ -361,7 +318,8 @@ class classifyReport extends Component {
             knowledge.
           </p>
         </section>
-      </>
+        <Footer />
+      </div>
     );
   }
 }

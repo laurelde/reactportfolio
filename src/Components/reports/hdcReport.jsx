@@ -1,48 +1,31 @@
 import React, { Component } from "react";
+import ReportOverview from "../reportOverview/reportOverview";
 import Header from "../header/header";
+import Footer from "../footer/footer";
 
 class HDCReport extends Component {
-  state = {};
+  state = {
+    name: "HDC on Campus",
+    client: "Hagerty",
+    role: "Media Content Intern",
+    duration: "May 2019 - August 2019",
+    skills: [
+      "UX Design",
+      "Persona Creation",
+      "Storyboarding",
+      "Sketching",
+      "Wireframing",
+      "Digital Prototyping",
+      "Figma",
+    ],
+    themeColor: "#238ded",
+  };
   render() {
     return (
-      <>
+      <div className="report">
         <Header></Header>
-        <h1>HDC App</h1>
-        <h1 class="projectType">HDC on Campus</h1>
-
-        <div class="specs">
-          <div class="row">
-            <div class="col-sm-4 col-xs-12">
-              <h2>
-                <img class="icon" src="images/icons/partner.svg"></img>
-                <strong> Client</strong>{" "}
-              </h2>
-              <h2>Hagerty</h2>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <h2>
-                <img class="icon" src="images/icons/girl.svg"></img>
-                <strong> Role</strong>
-              </h2>
-              <h2>Media Content Intern</h2>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <h2>
-                <img class="icon" src="images/icons/calendar.svg"></img>
-                <strong> Duration</strong>
-              </h2>
-              <h2>May 2019 - August 2019</h2>
-            </div>
-          </div>
-          <div class="row">
-            <h2>
-              <strong>Skills: </strong>UX Design, Persona Creation, Wireframing,
-              Prototyping, Figma
-            </h2>
-          </div>
-        </div>
-
-        <section class="project">
+        <ReportOverview key="1" overview={this.state} />
+        <section className="project-walkthrough">
           <h2>Problem:</h2>
           <p>
             Hagerty is seeking to expand membership for their Driver's Club,
@@ -62,13 +45,19 @@ class HDCReport extends Component {
             focus the design direction towards real users.
           </p>
 
-          <img src="images/prototyping/persona1.jpg" class="left-block"></img>
+          <img
+            src="images/prototyping/persona1.jpg"
+            className="left-block"
+          ></img>
           <br></br>
-          <img src="images/prototyping/persona2.jpg" class="right-block"></img>
+          <img
+            src="images/prototyping/persona2.jpg"
+            className="right-block"
+          ></img>
           <br></br>
           <img
             src="images/prototyping/persona3.jpg"
-            class="left-block bottom-image"
+            className="left-block bottom-image"
           ></img>
           <br></br>
           <p>
@@ -79,7 +68,7 @@ class HDCReport extends Component {
           </p>
 
           <h2>Goals</h2>
-          <div class="list-items">
+          <div className="list-items">
             <ul>
               <li>
                 Provide a centralized space for all HDC on Campus features
@@ -108,7 +97,7 @@ class HDCReport extends Component {
 
           <img
             src="images/prototyping/Workflows-2.jpg"
-            class="center-block"
+            className="center-block"
             id="workflow-hdc"
           ></img>
 
@@ -124,7 +113,7 @@ class HDCReport extends Component {
 
           <img
             src="images/prototyping/wireframing.jpg"
-            class="center-block"
+            className="center-block"
             id="wireframing-hdc"
           ></img>
 
@@ -141,7 +130,7 @@ class HDCReport extends Component {
 
           <img
             src="images/prototyping/deliverables.jpg"
-            class="center-block"
+            className="center-block"
             id="wireframing-hdc"
           ></img>
 
@@ -152,51 +141,8 @@ class HDCReport extends Component {
             mobile application.
           </p>
         </section>
-        <hr></hr>
-        <section class="nav-other-projects">
-          <div class="row projectLinks">
-            <div class="col-4 projPageLink">
-              <a href="interaction_design.html">
-                <div>
-                  <h4>Interaction Design</h4>
-                </div>
-                <div>
-                  <img
-                    class="projectFooter"
-                    src="images/classify_logo.png"
-                  ></img>
-                </div>
-              </a>
-            </div>
-            <div class="col-4 projPageLink midLink">
-              <a href="consulting.html">
-                <div>
-                  <h4>Consulting</h4>
-                </div>
-                <div>
-                  <img
-                    class="projectFooter"
-                    src="images/consulting_logo.png"
-                  ></img>
-                </div>
-              </a>
-            </div>
-            <div class="col-4 projPageLink">
-              <a href="design_thinking.html">
-                <div>
-                  <h4>Design Thinking</h4>
-                </div>
-                <div>
-                  <img
-                    class="projectFooter"
-                    src="images/design_thinking_logo.png"
-                  ></img>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-      </>
+        <Footer />
+      </div>
     );
   }
 }

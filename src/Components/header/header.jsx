@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class Header extends Component {
   render() {
     return (
-      <div>
+      <div class="header">
         <nav className="navbar navbar-expand-md scroll-top">
           <div id="brand">
             <Link className="navbar-brand" to="/">
